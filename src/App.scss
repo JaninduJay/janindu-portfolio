@@ -1,0 +1,26 @@
+.App {
+    height: 100vh;
+
+    .sections {
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        // scroll-snap-type: y mandatory;
+        // //to hide the scroll bar
+        // scrollbar-width: none;
+        // &::-webkit-scrollbar{
+        //     display: none;
+        // }
+
+        //for each element inside
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            //this will drop the scroll on to the start of each sector when scrolling
+            scroll-snap-align: start;
+        }
+    }
+}
